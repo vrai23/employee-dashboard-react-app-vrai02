@@ -18,8 +18,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <Title name={Data[0].firstName}/>
-      <Title last={Data[0].lastName} />
+      <Title name={Data[0].firstName} last={Data[0].lastName}/>
+
 
 
 

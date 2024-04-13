@@ -17,7 +17,7 @@ export default function MediaCard() {
       <Box sx={{ paddingTop: 2, paddingBottom: 2}}>
       <CardMedia
         sx={{ height: 240, width: 240, backgroundSize: "contain", margin: "auto" }}
-        image="profile3.png"
+        image="/employee-dashboard-react-app-vrai02/profile3.png"
         title="profile image"
       />
       </Box>
@@ -37,6 +37,7 @@ export default function MediaCard() {
       <Stack direction="row" spacing={1} sx={{ marginTop: 2, justifyContent: "center"}}>
       <Chip label="Figma" />
       <Chip label="Adobe XD" />
+      <Chip label="Sketch" />
     </Stack>
 
     <CardActions sx= {{justifyContent: "center"}}>

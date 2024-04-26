@@ -41,7 +41,7 @@ export default function MediaCard( { data }) {
         <Stack direction="row" flexWrap ="wrap" spacing={1} sx={{ marginTop: 2, justifyContent: "center" }}>
 
          {item.skills.map((skill, skillIndex) => (
-            <Chip key={skillIndex} label={skill} />
+            <Chip sx={ { marginTop: 2} } key={skillIndex} label={skill} />
           ))}
         </Stack>
 

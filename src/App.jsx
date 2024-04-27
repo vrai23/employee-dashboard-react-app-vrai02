@@ -9,21 +9,35 @@ import Container from '@mui/material/Container';
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Switch from "@mui/material/Switch";
+
 
 
 function App() {
-  const [onLeave, setLeave] = useState(true);
-  console.log(onLeave);
+  const [showOnLeave, setShowOnLeave] = useState(false);
+  console.log(showOnLeave);
  /* const [count, setCount] = useState(0) */
   /*console.log(Data); */
-  return (
-    <Container fixed>
 
-<Button variant="contained">Contained</Button>
-<Button variant="outlined">Outlined</Button>
+  const filteredData = !showOnLeave ? Data.filter((employee) => employee.onLeave) : Data;
 
-    <MediaCard  data={Data}/>
-    </Container>
+  const toggleOnLeave =  (event) => { if (showOnLeave) {setShowOnLeave(false)} else setShowOnLeave(true)};
+
+
+return(
+<Container fixed>
+  <Box>
+<Typography variant="h4" component="h1">
+        Employee Dashboard
+      </Typography>
+      </Box>
+ <Stack spacing = {2} direction="row" justifyContent = "center">
+<Switch onChange={toggleOnLeave} />
+</Stack>
+<MediaCard  data={filteredData}/>
+  </Container>
   );
 }
 
